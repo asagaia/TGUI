@@ -1,0 +1,4 @@
+{
+  "TelegramBotId": "", // Your Telegram Bot id
+  "DefaultUrlToPicture": "" // The url folder where pictures are located
+}
