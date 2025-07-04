@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TGUI.MainPage">
+
+    <Grid x:Name="main_grid" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="onexmm.png"
+               HeightRequest="185"
+               Aspect="AspectFit"
+               SemanticProperties.Description="onexmm logo" />
+        </StackLayout>
+
+        <Grid Grid.Row="1" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" BackgroundColor="{StaticResource Secondary}" Padding="5">
+                <Button x:Uid="0" x:Name="send_msg" TextColor="{StaticResource Gray600}" Margin="2" Text="Send message to all" Clicked="onSendMsgToAll"/>
+                <Button x:Uid="1" x:Name="send_msg_user" TextColor="{StaticResource Gray600}" Margin="2" Text="Send message to user" Clicked="onSendMsgToUser"/>
+                <Button x:Uid="2" x:Name="send_pic" TextColor="{StaticResource Gray600}" Margin="2" Text="Send picture to all" Clicked="onSendPicToAll"/>
+            </StackLayout>
+
+            <ContentView Grid.Column="1" x:Name="main_content"/>
+        </Grid>
+    </Grid>
+</ContentPage>
